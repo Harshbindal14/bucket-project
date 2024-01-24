@@ -1,0 +1,47 @@
+<!-- HTML file for the website with enhanced UI/UX for dynamic container and volume display -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Linking external stylesheet for styling -->
+    <title>Dynamic Volume Container Website</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Container for volume display -->
+        <div id="volumeContainer">
+            <div id="volumeIndicator"></div>
+        </div>
+    </div>
+    <!-- Container for displaying error or success messages -->
+
+    <div id="messageContainer" class="message-container"></div>
+
+
+  <div class="display">
+
+      <!-- Input for dynamically setting container size -->
+      <div class="input-group">
+        <label for="containerSize">Container Size (ml):</label>
+        <input type="number" id="containerSize" min="1" value="50">
+    </div>
+
+    <!-- Input for dynamically setting fill amount -->
+    <div class="input-group">
+        <label for="fillAmount">Fill Amount (ml):</label>
+        <input type="number" id="fillAmount" min="1" value="20">
+    </div>
+  </div>
+    
+    <!-- Button to fill the container with dynamic amount -->
+    <button onclick="fillContainer()">Fill</button>
+    
+    <!-- Button to empty the container -->
+    <button onclick="emptyContainer()">Empty</button>
+
+    <!-- External JavaScript file for volume functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* CSS file for enhanced styling of the website with container-like appearance and animation */
+
+.container {
+    position: relative; /* Position container relative to body */
+    width: 50%; /* Default container width */
+    margin: 50px auto; /* Center the container on the page */
+    text-align: center;
+    background-color: #f8f9fa; /* Light gray background color */
+    padding: 20px; /* Add padding to the container */
+    border: 2px solid #007bff; /* Blue border color */
+    border-radius: 10px; /* Add some border radius for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    overflow: hidden; /* Hide overflow to create the container-like appearance */
+}
+
+#volumeIndicator {
+    position: relative;
+    width: 100%;
+    height: 0;
+    background-color: #fff; /* White background for the container */
+    border: 2px solid #007bff; /* Blue border color */
+    border-radius: 10px; /* Add some border radius for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: height 0.5s ease; /* Smooth transition for container height change */
+}
+
+#volumeIndicator::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the indicator horizontally */
+    height: 10px;
+    width: 50px;
+    background-color: #007bff; /* Blue color for the volume indicator */
+    border-bottom-left-radius: 5px; /* Match the container's border radius */
+    border-bottom-right-radius: 5px; /* Match the container's border radius */
+    transition: height 0.5s ease; /* Smooth transition for indicator height change */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    display: block; /* Display buttons as block elements */
+    margin: 10px auto; /* Center buttons on the page */
+    padding: 12px 24px; /* Add padding to the buttons */
+    background-color: #28a745; /* Green button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px; /* Add some border radius for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button color change */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+button:disabled {
+    background-color: #6c757d; /* Gray background when button is disabled */
+    cursor: not-allowed; /* Change cursor to not-allowed when button is disabled */
+}
+
+.message-container {
+    position: absolute;
+    bottom: -30px; /* Move message container just below the container */
+    width: 100%;
+    color: #dc3545; /* Red color for error messages */
+    font-weight: bold;
+}

@@ -1,0 +1,90 @@
+/* CSS file for enhanced styling of the website */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Light gray background color */
+}
+
+.container {
+    position: relative; /* Position container relative to body */
+    width: 50%; /* Default container width */
+    margin: 50px auto; /* Center the container on the page */
+    text-align: center;
+}
+
+#volumeContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%; /* Set the aspect ratio (1:2) to avoid container height increase */
+    background-color: #fff; /* White background for the container */
+    border: 2px solid #007bff; /* Blue border color */
+    border-radius: 10px; /* Add some border radius for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+#volumeIndicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0; /* Initial height of volume indicator */
+    width: 100%;
+    background-color: #007bff; /* Blue color for the volume indicator */
+    border-bottom-left-radius: 10px; /* Match the container's border radius */
+    border-bottom-right-radius: 10px; /* Match the container's border radius */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    display: block; /* Display buttons as block elements */
+    margin: 10px auto; /* Center buttons on the page */
+    padding: 12px 24px; /* Add padding to the buttons */
+    background-color: #28a745; /* Green button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px; /* Add some border radius for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button color change */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+button:disabled {
+    background-color: #6c757d; /* Gray background when button is disabled */
+    cursor: not-allowed; /* Change cursor to not-allowed when button is disabled */
+}
+
+.message-container {
+    position: absolute;
+    /*bottom: 110px;  Move message container just below the volume container */
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    color: #dc3545; /* Red color for error messages */
+    font-weight: bold;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
